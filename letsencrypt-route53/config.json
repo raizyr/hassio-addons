@@ -1,0 +1,40 @@
+{
+  "name": "Let's Encrypt w/ Route 53",
+  "version": "2.2",
+  "slug": "letsencrypt",
+  "description": "Manage certificate from Let's Encrypt using DNS challenges against Route 53",
+  "url": "",
+  "startup": "once",
+  "boot": "manual",
+  "ports": {
+    "80/tcp": 80
+   },
+  "map": ["ssl:rw"],
+  "options": {
+    "aws": {
+      "access_key": null,
+      "secret_key": null
+    },
+    "letsencrypt": {
+      "accept_terms": false,
+      "email": null,
+      "domains": [null],
+      "certfile": "fullchain.pem",
+      "keyfile": "privkey.pem"
+    }
+  },
+  "schema": {
+    "aws": {
+      "access_key": "str",
+      "secret_key": "str"
+    },
+    "letsencrypt": {
+      "accept_terms": "bool",
+      "email": "email",
+      "domains": ["str"],
+      "certfile": "str",
+      "keyfile": "str"
+    }
+  },
+  "image": "raizyr/{arch}-addon-letsencrypt-route53"
+}
