@@ -3,7 +3,7 @@
   "version": "2.2",
   "slug": "letsencrypt",
   "description": "Manage certificate from Let's Encrypt using DNS challenges against Route 53",
-  "url": "",
+  "url": "https://github.com/raizyr/hassio-addons",
   "startup": "once",
   "boot": "manual",
   "ports": {
