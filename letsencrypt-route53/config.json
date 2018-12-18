@@ -35,6 +35,5 @@
       "certfile": "str",
       "keyfile": "str"
     }
-  },
-  "image": "raizyr/{arch}-addon-letsencrypt-route53"
+  }
 }
